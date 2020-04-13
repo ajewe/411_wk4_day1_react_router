@@ -4,7 +4,7 @@ import { Container, Paper, Chip } from '@material-ui/core'
 
 const Car = (props) => {
   let id = props.match.params.id
-  let specificCar = cars[id - 1]
+  let specificCar = cars.find(car => car.id === parseInt(id))
 
   const chipData = [
     `id: ${specificCar.id}`,
